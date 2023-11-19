@@ -1,8 +1,7 @@
-import {  View } from 'react-native';
-import Login from './src/screens/login/login';
+import Main from './src/screens/rotas';
 
 export default function App() {
   return (
-      <Login/>
+      <Main/>
   )
 }
