@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 // Botões
 const estilos = StyleSheet.create({
-    botao:{
+    botao: {
         marginBottom: 20,
         width: 300,
         height: 60,
@@ -10,31 +10,97 @@ const estilos = StyleSheet.create({
         backgroundColor: "#E06C2D",
         justifyContent: "center"
     },
-    textoBotao:{
+    botaoMenor: {
+        marginBottom: 20,
+        width: 140,
+        height: 40,
+        borderRadius: 8,
+        backgroundColor: "#E7E7E7",
+        justifyContent: "center"
+    },
+    textoBotao: {
         fontSize: 20,
+        fontFamily: "Arial",
         fontWeight: "bold",
         textAlign: "center",
         color: "#fff"
     },
-    containerInputs:{
+    textoAlternativoBotao: {
+        fontSize: 20,
+        fontFamily: "Arial",
+        fontWeight: "bold",
+        textAlign: "center",
+        color: "#E06C2D"
+    },
+    containerInputs: {
         marginBottom: 20
     },
-    input:{
+    input: {
         fontSize: 20,
+        fontFamily: "Arial",
         fontWeight: "500",
         color: "#9B9B9B",
-        width: 300, 
-        height: 60, 
-        borderWidth: 1, 
+        width: 300,
+        height: 60,
+        borderWidth: 1,
         borderColor: "#9B9B9B",
         // backgroundColor: "gray", 
-        padding: 10, 
-        borderRadius: 10, 
+        padding: 10,
+        borderRadius: 10,
         marginBottom: 20
     },
-    select:{fontSize: 20, height:60, color:"#9B9B9B", padding: 10, borderWidth: 2, 
-    borderColor: "#9B9B9B", borderRadius: 10, 
-    marginBottom: 20, placeholder: "Selecione um"}
+    inputMaior: {
+        fontSize: 20,
+        fontFamily: "Arial",
+        fontWeight: "500",
+        color: "#9B9B9B",
+        width: 300,
+        height: 230,
+        borderWidth: 1,
+        borderColor: "#9B9B9B",
+        // backgroundColor: "gray", 
+        padding: 10,
+        borderRadius: 10,
+        marginBottom: 20
+    },
+    select: {
+        width: 300,
+        fontSize: 20,
+        height: 60,
+        color: "#9B9B9B",
+        padding: 10,
+        borderWidth: 2,
+        borderColor: "#9B9B9B",
+        borderRadius: 10,
+        marginBottom: 20
+    },
+    textoGeral: {
+        fontSize: 20,
+        fontFamily: "Arial"
+    },
+    titulo: {
+        fontSize: 20,
+        fontFamily: "Arial",
+        fontWeight: "bold"
+    },
+    textoExplicativo: {
+        fontSize: 16,
+        fontFamily: "Arial",
+        color: "#9B9B9B"
+    },  
+    containerTexto:{
+        width: 300,
+        marginBottom: 20
+    },
+    containerBotoes:{
+        flex: 1,
+        width: 300,
+        flexDirection: "row",
+        justifyContent: "center",
+        alignContent: "space-between",
+        marginTop: 9,
+        marginBottom: 20
+    }
 })
 
 export default estilos
