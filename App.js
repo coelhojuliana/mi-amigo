@@ -1,10 +1,9 @@
 // import Main from './src/screens/rotas';
-import CadastrarPet from "./src/screens/cadastrarpet/cadastrarpet"
-
+import PerfilPessoa from "./src/screens/perfil/perfil_pessoa"
 
 export default function App() {
   return (
       // <Main/>
-      <CadastrarPet/>
+      <PerfilPessoa/>
   )
 }

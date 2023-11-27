@@ -154,7 +154,9 @@ const PerfilPessoa = () => {
                 </View>
                 <TextInput
                     style={[estilos.inputMaior, { marginBottom: 40 }]}
-                    placeholder="Conte aqui um pouco sobre vocÊ"
+                    placeholder="Conte aqui um pouco sobre você"
+                    multiline={true}
+                    numberOfLines={4}
                     defaultValue={descricao}
                     onChangeText={(textodigitado) => setDescricao(textodigitado)}
                 />
