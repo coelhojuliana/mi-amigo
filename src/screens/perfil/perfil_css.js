@@ -6,6 +6,7 @@ const estiloperfil = StyleSheet.create ({
         alignItems: "center",
         marginTop: 20
     }
+
 })
 
 export default estiloperfil

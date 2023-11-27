@@ -95,11 +95,20 @@ const estilos = StyleSheet.create({
     containerBotoes:{
         flex: 1,
         width: 300,
+        height: 40,
         flexDirection: "row",
         justifyContent: "center",
         alignContent: "space-between",
         marginTop: 9,
-        marginBottom: 20
+        marginBottom: 20,
+    },
+    botaoToggle: {
+        width: 382,
+        height: 40,
+        backgroundColor: "#E7E7E7",
+        marginBottom: 12,
+        justifyContent: "center",
+        paddingLeft: 24
     }
 })
 
