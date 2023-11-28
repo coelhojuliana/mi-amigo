@@ -2,7 +2,7 @@ import { View, Text, TextInput, Pressable, ScrollView } from "react-native"
 import { useState } from "react"
 
 import { Picker } from "@react-native-picker/picker";
-import ImagePicker from "expo-image-picker"
+import { Icon } from "react-native-paper";
 
 import estilos from "../css_geral"
 import estiloCadastrarPet from "./cadastrarpet_css"
@@ -12,6 +12,55 @@ const CadastrarPet = () => {
     const [nome, setNome] = useState("")
     const [raca, setRaca] = useState("")
     const [descricao, setDescricao] = useState("")
+    const [togle1, setTogle1] = useState("toggle-switch-off-outline")
+    const [togle2, setTogle2] = useState("toggle-switch-off-outline")
+    const [togle3, setTogle3] = useState("toggle-switch-off-outline")
+    const [togle4, setTogle4] = useState("toggle-switch-off-outline")
+    const [isPressedCachorro, setIsPressedCachorro] = useState(true)
+    const [isPressedGato, setIsPressedGato] = useState(false)
+    const [isPressedFemea, setIsPressedFemea] = useState(true)
+    const [isPressedMacho, setIsPressedMacho] = useState(false)
+
+    const handlePressCachorro = () => {
+        setIsPressedCachorro(!isPressedCachorro)
+    }
+    const handlePressGato = () => {
+        setIsPressedGato(!isPressedGato)
+    }
+    const handlePressFemea = () => {
+        setIsPressedFemea(!isPressedFemea)
+    }
+    const handlePressMacho = () => {
+        setIsPressedMacho(!isPressedMacho)
+    }
+    
+    
+   
+
+    const botaoPressed1 = () => {
+        setTogle1("toggle-switch-outline")
+        if(togle1==="toggle-switch-outline"){
+            setTogle1("toggle-switch-off-outline")
+        }
+    }
+    const botaoPressed2 = () => {
+        setTogle2("toggle-switch-outline")
+        if(togle2==="toggle-switch-outline"){
+            setTogle2("toggle-switch-off-outline")
+        }
+    }
+    const botaoPressed3 = () => {
+        setTogle3("toggle-switch-outline")
+        if(togle3==="toggle-switch-outline"){
+            setTogle3("toggle-switch-off-outline")
+        }
+    }
+    const botaoPressed4 = () => {
+        setTogle4("toggle-switch-outline")
+        if(togle4==="toggle-switch-outline"){
+            setTogle4("toggle-switch-off-outline")
+        }
+    }
 
     return (
         <ScrollView>
@@ -30,11 +79,11 @@ const CadastrarPet = () => {
                     <Text style={estilos.titulo}>Espécie</Text>
                 </View>
                 <View style={estiloCadastrarPet.componentBotoesinhos}>
-                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor, { marginRight: 14, marginBottom: 0 }]}>
-                        <Text style={estilos.textoAlternativoBotao}>Cachorro</Text>
+                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor, { marginRight: 14, marginBottom: 0, backgroundColor: isPressedCachorro ? '#E06C2D' : '#E7E7E7' }]} onPress={handlePressCachorro}>
+                        <Text style={[estilos.textoAlternativoBotao, {color: isPressedCachorro ? "#E7E7E7" : "#E06C2D" }]}>Cachorro</Text>
                     </Pressable>
-                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor]}>
-                        <Text style={estilos.textoAlternativoBotao}>Gato</Text>
+                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor, {backgroundColor: isPressedGato ? '#E06C2D' : '#E7E7E7' }]} onPress={handlePressGato}>
+                        <Text style={[estilos.textoAlternativoBotao, {color: isPressedGato ? "#E7E7E7" : "#E06C2D" }]}>Gato</Text>
                     </Pressable>
                 </View>
                 <View style={estiloCadastrarPet.containerTexto}>
@@ -50,11 +99,11 @@ const CadastrarPet = () => {
                     <Text style={estilos.titulo}>Sexo</Text>
                 </View>
                 <View style={estiloCadastrarPet.componentBotoesinhos}>
-                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor, { marginRight: 14, marginBottom: 0 }]}>
-                        <Text style={estilos.textoAlternativoBotao}>Fêmea</Text>
+                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor, { marginRight: 14, marginBottom: 0, backgroundColor: isPressedFemea ? '#E06C2D' : '#E7E7E7' }]} onPress={handlePressFemea}>
+                        <Text style={[estilos.textoAlternativoBotao, {color: isPressedFemea ? "#E7E7E7" : "#E06C2D"}]}>Fêmea</Text>
                     </Pressable>
-                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor]}>
-                        <Text style={estilos.textoAlternativoBotao}>Macho</Text>
+                    <Pressable style={[estilos.botaoMenor, estiloCadastrarPet.botaoMenor, {backgroundColor: isPressedMacho ? '#E06C2D' : '#E7E7E7'}]} onPress={handlePressMacho}>
+                        <Text style={[estilos.textoAlternativoBotao, {color: isPressedMacho ? "#E7E7E7" : "#E06C2D"}]}>Macho</Text>
                     </Pressable>
                 </View>
                 <View style={estiloCadastrarPet.containerTexto}>
@@ -70,15 +119,51 @@ const CadastrarPet = () => {
                 </Picker>
                 <View style={estilos.botaoToggle}>
                     <Text style={[estilos.textoGeral, { color: "#5E5E5E" }]}>Castrado</Text>
+                    <View style={{marginRight: 24}}>
+                        <Pressable onPress={botaoPressed1}>
+                            <Icon
+                                source={togle1}
+                                color="#E06C2D"
+                                size={40}
+                            />
+                        </Pressable>
+                    </View>
                 </View>
                 <View style={estilos.botaoToggle}>
                     <Text style={[estilos.textoGeral, { color: "#5E5E5E" }]}>Vacinado</Text>
+                    <View style={{marginRight: 24}}>
+                        <Pressable onPress={botaoPressed2}>
+                            <Icon
+                                source={togle2}
+                                color="#E06C2D"
+                                size={40}
+                            />
+                        </Pressable>
+                    </View>
                 </View>
                 <View style={estilos.botaoToggle}>
                     <Text style={[estilos.textoGeral, { color: "#5E5E5E" }]}>Vermifugado</Text>
+                    <View style={{marginRight: 24}}>
+                        <Pressable onPress={botaoPressed3}>
+                            <Icon
+                                source={togle3}
+                                color="#E06C2D"
+                                size={40}
+                            />
+                        </Pressable>
+                    </View>
                 </View>
                 <View style={estilos.botaoToggle}>
                     <Text style={[estilos.textoGeral, { color: "#5E5E5E" }]}>Cuidados especiais</Text>
+                    <View style={{marginRight: 24}}>
+                        <Pressable onPress={botaoPressed4}>
+                            <Icon
+                                source={togle4}
+                                color="#E06C2D"
+                                size={40}
+                            />
+                        </Pressable>
+                    </View>
                 </View>
 
                 <View style={estiloCadastrarPet.containerTexto}>

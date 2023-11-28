@@ -1,9 +1,12 @@
 // import Main from './src/screens/rotas';
-import PerfilPessoa from "./src/screens/perfil/perfil_pessoa"
+import DetalhesPet from "./src/screens/detalhespet/detalhespet"
+import { PaperProvider } from "react-native-paper"
 
 export default function App() {
   return (
       // <Main/>
-      <PerfilPessoa/>
+      <PaperProvider>
+        <DetalhesPet/>
+      </PaperProvider>
   )
 }

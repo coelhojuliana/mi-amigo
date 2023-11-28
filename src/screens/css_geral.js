@@ -107,8 +107,10 @@ const estilos = StyleSheet.create({
         height: 40,
         backgroundColor: "#E7E7E7",
         marginBottom: 12,
-        justifyContent: "center",
-        paddingLeft: 24
+        alignItems: "center",
+        paddingLeft: 24,
+        flexDirection: "row",
+        justifyContent: "space-between"
     }
 })
 
