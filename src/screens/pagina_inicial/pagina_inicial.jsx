@@ -22,6 +22,9 @@ const PaginaInicial = ({navigation}) => {
                 <Pressable style={estilos.botao} onPress={() => { navigation.navigate("Cadastre-se") }}>
                     <Text style={estilos.textoBotao}>Cadastre-se</Text>
                 </Pressable>
+                <Pressable style={estilos.botao} onPress={() => { navigation.navigate("Home") }}>
+                    <Text style={estilos.textoBotao}>Home</Text>
+                </Pressable>
             </View>
         </View>
     )
